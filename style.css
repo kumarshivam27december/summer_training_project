@@ -1,0 +1,155 @@
+/* Reset margin and padding for consistency */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Ensure border and padding are included in the element's total width and height */
+    font-family: 'Itim', cursive;
+}
+
+/* Dark green background with subtle neon effect */
+.background {
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 50, 0, 0.9));
+    height: 100vh;
+    padding-top: 1px;
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite; /* Slow gradient animation */
+}
+
+/* Gradient animation for background */
+@keyframes gradientShift {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* Title styling with neon green effect */
+.title {
+    color: #00FF00; /* Neon green */
+    text-align: center;
+    font-size: 40px;
+    margin-top: 10%;
+    text-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 30px #00FF00;
+}
+
+/* Display styling with neon green border */
+
+
+.display {
+    color: #00FF00; /* Neon green */
+    font-size: 20px; /* Adjusted font size */
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border: 2px solid #00FF00; /* Neon green border */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00FF00;
+    background: rgba(0, 0, 0, 0.5); /* Slightly transparent dark background */
+}
+/* Glassy effect for announcer and timer */
+.glassy {
+    background: rgba(95, 75, 75, 0.4); /* Semi-transparent dark background */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3); /* Glassy green glow */
+}
+
+/* Hide element */
+.hide {
+    display: none;
+}
+
+/* Container styling */
+.container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Responsive columns */
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+    max-width: 300px;
+}
+
+/* Tile styling with glassy effect */
+.tile {
+    background: rgba(0, 0, 0, 0.6); /* Dark glass effect */
+    border: 2px solid #00FF00; /* Neon green border */
+    border-radius: 10px;
+    min-width: 100px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s; /* Smooth transitions */
+    text-shadow: 0 0 5px #00FF00; /* Neon text effect */
+}
+
+/* Hover effect for tiles */
+.tile:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.05);
+}
+
+/* Player colors */
+.playerX {
+    color: #00FF00; /* Neon green */
+}
+
+.playerO {
+    color: hsl(290, 100%, 50%); /* Neon green (same as player X for uniformity) */
+}
+
+/* Controls section */
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+
+/* Button styling with glassy effect */
+.controls button {
+    background: rgba(0, 0, 0, 0.4); /* Glassy background */
+    backdrop-filter: blur(10px);
+    border: 2px solid #00FF00; /* Neon green border */
+    color: #00FF00; /* Neon green text */
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-left: 1em;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.controls button:hover {
+    background: rgba(0, 255, 0, 0.2);
+    transform: scale(1.05);
+}
+
+/* Specific button colors */
+.restart {
+    border-color: #00FF00; /* Neon green border */
+    color: #00FF00; /* Neon green text */
+}
+
+#reset {
+    border-color: #FF3860; /* Neon red border */
+    color: #FF3860; /* Neon red text */
+}
+
+.announcer {
+    color: #00FF00; /* Neon green */
+    font-size: 24px; /* Adjusted font size */
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #00FF00; /* Neon green border */
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00FF00;
+    background: rgba(0, 0, 0, 0.7); /* Slightly darker transparent background */
+    margin-top: 1em;
+}
